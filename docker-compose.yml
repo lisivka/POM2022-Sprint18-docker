@@ -1,0 +1,40 @@
+version: "3"
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: postgres3
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=postgres
+#      - PGDATA:/code/pgdata
+#    volumes:
+#      - .:/docker-entrypoint-initdb.d
+#      - .:/code
+
+    ports:
+      - "5432:5432"
+
+  web:
+    build: .
+    container_name: django3
+
+#    command: python library/manage.py runserver 0.0.0.0:8000
+    command: bash entrypoint.sh
+
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+#  pgadmin:
+#    container_name: pgadmin3
+#    image: dpage/pgadmin4
+#    environment:
+#      PGADMIN_DEFAULT_EMAIL: postgres@postgres.com
+#      PGADMIN_DEFAULT_PASSWORD : postgres
+#    ports:
+#      - "5050:80"
+
