@@ -14,8 +14,8 @@ python library/manage.py migrate
 
 
 # Create superuser
-echo "Creating superuser"
-echo "from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.create_superuser('l@gmail.com', 'l@gmail.com', '123')" | python leemark/manage.py shell
+#echo "Creating superuser"
+#echo "from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.create_superuser('l@gmail.com', 'l@gmail.com', '123')" | python library/manage.py shell
 
 # Start server
 echo "Starting server"

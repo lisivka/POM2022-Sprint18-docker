@@ -25,7 +25,7 @@ SECRET_KEY = '_y2b#-m(nwf8irkpgs)wpg+-e$#_7^xaevp^me4+u4ov+3fyw*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['149.100.157.30', 'localhost', 'sleemark.com']
+ALLOWED_HOSTS = ['149.100.157.30', 'localhost', 'sleemark.com', '127.0.0.1']
 
 # Application definition
 
